@@ -24,12 +24,43 @@
             <li><a href="Schulung.html">Schulungen</a> </li>
             <li><a href="Geschichte.html">Geschichte</a> </li>
             <li><a href="Fotos.html">Fotos</a> </li>
-            <li style="float:right"><a href="Login.html">Login</a> </li>
+            <li style="float:right" onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-top:200px; margin-left:160px;"><a>Login</a> </li>
         </ul>
     </nav>
 </header>
 <section>
         <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=9t71scfa40g9qebsarma6pibd0%40group.calendar.google.com&amp;color=%2342104A&amp;ctz=Europe%2FVienna" style="border-width:0" width="90%" height="600" frameborder="0" scrolling="no"></iframe></iframe>
 </section>
+<h1 style="text-align:center; font-size:50px; color:#fff">Modal Popup Box Login Form</h1>
+
+<div id="modal-wrapper" class="modal">
+
+    <form class="modal-content animate" action="/action_page.png">
+
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Login schließen">&times;</span>
+            <h1 style="text-align:center">Einloggen</h1>
+        </div>
+
+        <div class="container">
+            <input type="text" placeholder="Benuztername" name="uname">
+            <input type="password" placeholder="Passwort" name="psw">
+            <button type="submit">Login</button>
+        </div>
+
+    </form>
+
+</div>
+
+<script>
+    // If user clicks anywhere outside of the modal, Modal will close
+
+    var modal = document.getElementById('modal-wrapper');
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 </body>
 </html>
