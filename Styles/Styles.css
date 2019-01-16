@@ -160,7 +160,9 @@ section aside li a:hover {
 }
 
 
-/*Login Styles
+
+
+*{font-family:schrift;}
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
