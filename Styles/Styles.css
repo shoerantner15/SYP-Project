@@ -159,7 +159,10 @@ section aside li a:hover {
     text-decoration: underline;
 }
 
-*{margin:0px; padding:0px; font-family:Helvetica, Arial, sans-serif;}
+
+
+
+*{font-family:schrift;}
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
