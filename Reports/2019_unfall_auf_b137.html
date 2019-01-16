@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FF Zell an der Pram</title>
+    <link href="../Styles/Styles.css" rel="stylesheet">
+    <link href="../Login.html" rel="login">
+    <link href="../Styles/w3Styles.css" rel="stylesheet" >
+    <style>
+        .mySlides {display:none}
+        .w3-left, .w3-right, .w3-badge {cursor:pointer}
+        .w3-badge {height:13px;width:13px;padding:0}
+    </style>
+    <link rel="shortcut icon" href="../images/icon.png"/>
+</head>
+<header>
+    <img src="../images/Logo%20Zell%20a.%20P..png">
+    <nav id="nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../calendar.html">Kalender</a> </li>
+            <li><a>Mitglieder</a>
+                <ul>
+                    <li><a href="../Members/Aktiv.html">Aktiv</a></li>
+                    <li><a href="../Members/Jugend.html">Jugend</a></li>
+                    <li><a href="../Members/Reserve.html">Reserve</a></li>
+                </ul>
+            </li>
+            <li><a href="../EinsätzeUndÜbungen.html">Einsätze & Übungen</a> </li>
+            <li><a href="../Ausrüstung.html">Ausrüstung</a> </li>
+            <li><a href="../Schulung.html">Schulungen</a> </li>
+            <li><a href="../Geschichte.html">Geschichte</a> </li>
+            <li><a href="../Fotos.html">Fotos</a> </li>
+            <li style="float:right" onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-top:200px; margin-left:160px;"><a>Login</a> </li>
+        </ul>
+    </nav>
+</header>
+<body>
+
+<section>
+    <article>
+        <article>
+            <h2>Schwerer Unfall auf der B137</h2>
+            <div class="w3-content w3-display-container" style="max-width:800px; margin: 2% auto">
+                <img class="mySlides" src="../images/Unfall_ff.jpg" style="width:100%">
+                <img class="mySlides" src="../images/Unfall_auto1.jpg" style="width:100%">
+                <img class="mySlides" src="../images/Unfall_auto2.jpg" style="width:100%">
+                <img class="mySlides" src="../images/Unfall_ff.jpg" style="width:100%">
+                <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+                    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+                    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+                </div>
+            </div>
+            <p>
+                Am Abend des 11. Januars 2019 fand im Gasthaus Bauböck die Jahresvollversammlung der Freiwilligen Feuerwehr Pimpfing statt. Ca. 20 Minuten nachdem diese offiziell durch HBI Thomas Summergruber beendet wurde, wurden die anwesenden Kameraden vom Einsatzalltag eingeholt. In der Ortschaft Radlern kam es zu einem schweren Verkehrsunfall weshalb die Feuerwehren Andorf und Pimpfing umgehend alarmiert wurden. Am Einsatzort angekommen fand man 2 völlig demolierte Fahrzeuge vor, wobei die Unfallteilnehmer bereits durch das Rote Kreuz notfallmedizinisch betreut wurden. Ein aus Richtung Andorf kommender SUV kam aufgrund der schneebedeckten Fahrbahn in einer leichten Rechtskurve von der Fahrspur ab und krachte daraufhin in einen in Richtung Andorf fahrenden Verkehrsteilnehmer. Nach dem Eintreffen an der Einsatzstelle bestanden die Aufgaben der Feuerwehr Pimpfing darin die Harter-Landesstraße vollständig für den Verkehr zu sperren. Danach wurde das Rote Kreuz beim Betreuen der Patienten unterstützt und anschließend der Abtransport der Unfallfahrzeuge vorbereitet. Nach ca. 1,5 Stunden konnten die ausgerückten ca. 30 Kameradinnen und Kameraden wieder ins Feuerwehrhaus einrücken und die Einsatzbereitschaft wiederherstellen.
+            </p>
+        </article>
+    </article>
+    <aside>
+        <article>
+            <h1>News</h1>
+            <ul id="newsList">
+                <li><a href=""> Ölspur in Zell</a></li>
+                <li><a href="2019_unfall_auf_b137.html">Schwerer Unfall auf da B137</a></li>
+                <li><a href="">Wohnhaus Brand in Zell</a></li>
+                <li style="border-bottom: none"> <a href="" >Aufräumaktion nach Unwetter</a></li>
+            </ul>
+        </article>
+        <article>
+            <h1>Laufende Einsätze</h1>
+            <p>
+                <a href="http://intranet.ooelfv.at/" target="_blank">
+                    <img src="http://cf.intranet.ooelfv.at/webext2/img/karte_laufend.jpg" alt="Einsätze">
+                </a>
+            </p>
+        </article>
+        <article>
+            <h1>Live Unwetterwarnung</h1>
+            <a href="http://www.uwz.at" target="_blank" title="Aktuelle Unwetterwarnungen für Österreich">
+                <img src="http://www.uwz.at/at/de/outwards/current_uwz.png" alt="" width="200">
+            </a>
+        </article>
+        <article>
+            <h1>Heutige Termine</h1>
+        </article>
+    </aside>
+</section>
+
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+        showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" w3-white", "");
+        }
+        x[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " w3-white";
+    }
+</script>
+
+<h1 style="text-align:center; font-size:50px; color:#fff">Modal Popup Box Login Form</h1>
+<div id="modal-wrapper" class="modal">
+
+    <form class="modal-content animate" action="../action_page.png">
+
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Login schließen">&times;</span>
+            <h1 style="text-align:center">Einloggen</h1>
+        </div>
+
+        <div class="container">
+            <input type="text" placeholder="Benuztername" name="uname">
+            <input type="password" placeholder="Passwort" name="psw">
+            <button type="submit">Login</button>
+        </div>
+
+    </form>
+
+</div>
+<script>
+    // If user clicks anywhere outside of the modal, Modal will close
+
+    var modal = document.getElementById('modal-wrapper');
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
