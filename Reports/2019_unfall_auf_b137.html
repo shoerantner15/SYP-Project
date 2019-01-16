@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FF Zell an der Pram</title>
+    <link href="../Styles/Styles.css" rel="stylesheet">
+    <link href="../Login.html" rel="login">
+    <link rel="shortcut icon" href="../images/icon.png"/>
+</head>
+<header>
+    <img src="../images/Logo%20Zell%20a.%20P..png">
+    <nav id="nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../calendar.html">Kalender</a> </li>
+            <li><a>Mitglieder</a>
+                <ul>
+                    <li><a href="../Members/Aktiv.html">Aktiv</a></li>
+                    <li><a href="../Members/Jugend.html">Jugend</a></li>
+                    <li><a href="../Members/Reserve.html">Reserve</a></li>
+                </ul>
+            </li>
+            <li><a href="../EinsätzeUndÜbungen.html">Einsätze & Übungen</a> </li>
+            <li><a href="../Ausrüstung.html">Ausrüstung</a> </li>
+            <li><a href="../Schulung.html">Schulungen</a> </li>
+            <li><a href="../Geschichte.html">Geschichte</a> </li>
+            <li><a href="../Fotos.html">Fotos</a> </li>
+            <li style="float:right" onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-top:200px; margin-left:160px;"><a>Login</a> </li>
+        </ul>
+    </nav>
+</header>
+<body>
+
+
+<h1 style="text-align:center; font-size:50px; color:#fff">Modal Popup Box Login Form</h1>
+
+<div id="modal-wrapper" class="modal">
+
+    <form class="modal-content animate" action="../action_page.png">
+
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Login schließen">&times;</span>
+            <h1 style="text-align:center">Einloggen</h1>
+        </div>
+
+        <div class="container">
+            <input type="text" placeholder="Benuztername" name="uname">
+            <input type="password" placeholder="Passwort" name="psw">
+            <button type="submit">Login</button>
+        </div>
+
+    </form>
+
+</div>
+
+<script>
+    // If user clicks anywhere outside of the modal, Modal will close
+
+    var modal = document.getElementById('modal-wrapper');
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
