@@ -1,0 +1,97 @@
+@font-face {
+    font-family: schrift;
+    src: url("../fonts/Calibri.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*MENÜ*/
+header img {
+    margin: 1%;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+    font-family: schrift;
+
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px 16px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover, nav li a.active{
+    background-color: #FC0101;
+    transition: 0.20s;
+
+}
+
+nav ul li ul li{
+    float: none;
+}
+
+nav ul li ul{
+    display: block;
+    position:absolute;
+}
+
+nav ul li ul li a {
+    display: block;
+    text-align: left;
+    padding: 10px 12px 12px 12px;
+}
+
+nav ul li ul{
+    display: none;
+    position: absolute;
+    background-color: red;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+/*CONTENT*/
+section{
+    padding: 0;
+    margin: 5% 25%;
+    margin-top: 2%;
+}
+
+section article{
+    display: block;
+    background-color: #EDEDED;
+}
+
+section article img{
+    width: 20%;
+    height: auto;
+    margin-left: 2%;
+}
+
+section article article{
+    padding-bottom: 8%;
+    padding-top: 3%;
+    border-top: #dddddd  1px solid;
+}
+
+section article article p {
+    margin: 0;
+    padding-left: 25%;
+    margin-bottom: 1%;
+    font-family: schrift;
+}
