@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eefea9e9-8e74-469d-928a-a2d550d8dd7e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Styles/w3Styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/w3Styles.css" afterDir="false" />
-    </list>
+    <list default="true" id="eefea9e9-8e74-469d-928a-a2d550d8dd7e" name="Default Changelist" comment="" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -170,8 +168,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Reports/2019_unfall_auf_b137.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="45" column="61" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
+            <state relative-caret-position="339">
+              <caret line="50" column="98" lean-forward="true" selection-start-line="50" selection-start-column="98" selection-end-line="50" selection-end-column="98" />
               <folding>
                 <element signature="n#header#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#li#8;n#ul#0;n#nav#0;n#header#0;n#html#0;n#!!top" expanded="true" />
@@ -194,8 +192,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Styles/w3Styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+            <state relative-caret-position="272">
+              <caret line="16" column="112" selection-start-line="16" selection-start-column="112" selection-end-line="16" selection-end-column="112" />
             </state>
           </provider>
         </entry>
@@ -204,7 +202,7 @@
         <entry file="file://$PROJECT_DIR$/EinsätzeUndÜbungen.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
-              <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+              <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
@@ -321,7 +319,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1386" />
     <option name="height" value="788" />
@@ -383,6 +381,7 @@
       <tasks />
       <arguments />
       <envs />
+      <method v="2" />
     </configuration>
   </component>
   <component name="SvnConfiguration">
@@ -409,7 +408,7 @@
       <workItem from="1547027067017" duration="919000" />
       <workItem from="1547120111755" duration="307000" />
       <workItem from="1547622523459" duration="726000" />
-      <workItem from="1547633931067" duration="3007000" />
+      <workItem from="1547633931067" duration="3634000" />
     </task>
     <task id="LOCAL-00001" summary="schrift">
       <created>1547622714869</created>
@@ -429,7 +428,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29995000" />
+    <option name="totallyTimeSpent" value="30622000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -621,7 +620,7 @@
     <entry file="file://$PROJECT_DIR$/EinsätzeUndÜbungen.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
-          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
@@ -630,8 +629,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Reports/2019_unfall_auf_b137.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="45" column="61" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
+        <state relative-caret-position="339">
+          <caret line="50" column="98" lean-forward="true" selection-start-line="50" selection-start-column="98" selection-end-line="50" selection-end-column="98" />
           <folding>
             <element signature="n#header#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#li#8;n#ul#0;n#nav#0;n#header#0;n#html#0;n#!!top" expanded="true" />
@@ -652,8 +651,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Styles/w3Styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        <state relative-caret-position="272">
+          <caret line="16" column="112" selection-start-line="16" selection-start-column="112" selection-end-line="16" selection-end-column="112" />
         </state>
       </provider>
     </entry>
