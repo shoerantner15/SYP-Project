@@ -159,9 +159,10 @@ section aside li a:hover {
     text-decoration: underline;
 }
 
-*{
-    font-family: schrift;
-}
+
+
+
+*{font-family:schrift;}
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
