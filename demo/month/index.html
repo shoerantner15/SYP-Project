@@ -39,44 +39,43 @@
 	<link type="text/css" rel="stylesheet" href="../themes/scheduler_green.css?v=2019.1.3521" />    
 	<link type="text/css" rel="stylesheet" href="../themes/scheduler_blue.css?v=2019.1.3521" />    
     <link type="text/css" rel="stylesheet" href="../themes/scheduler_traditional.css?v=2019.1.3521" />
-	<link type="text/css" rel="stylesheet" href="../themes/scheduler_transparent.css?v=2019.1.3521" />    
-
-
+	<link type="text/css" rel="stylesheet" href="../themes/scheduler_transparent.css?v=2019.1.3521" />
+    <title>FF Zell an der Pram</title>
+    <link href="../../Styles/Styles.css" rel="stylesheet">
+    <link href="../../Login.html" rel="login">
+    <link rel="shortcut icon" href="../../images/Logo/icon.png"/>
+    <header>
+        <img src="../../images/Logo/Logo%20Zell%20a.%20P..png">
+        <nav id="nav">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="index.html">Kalender</a> </li>
+                <li><a>Mitglieder</a>
+                    <ul>
+                        <li><a href="../../Members/Aktiv.html">Aktiv</a></li>
+                        <li><a href="../../Members/Jugend.html">Jugend</a></li>
+                        <li><a href="../../Members/Reserve.html">Reserve</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../EinsätzeUndÜbungen.html">Einsätze & Übungen</a> </li>
+                <li><a href="../../Ausrüstung.html">Ausrüstung</a> </li>
+                <li><a href="../../Schulung.html">Schulungen</a> </li>
+                <li><a href="../../Geschichte.html">Geschichte</a> </li>
+                <li><a href="../../Fotos.html">Fotos</a> </li>
+                <li style="float:right" onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-top:200px; margin-left:160px;"><a>Login</a> </li>
+            </ul>
+        </nav>
+    </header>
 	<!-- /head -->
 </head>
 <body>
 
 <!-- top -->
-    <div id="header">
-			<div class="bg-help">
-				<div class="inBox">
-					<h1 id="logo"><a href='https://javascript.daypilot.org/'>DayPilot Pro for JavaScript</a> &raquo; <a href='https://javascript.daypilot.org/demo/'>Demo</a></h1>
-					<p id="claim">JavaScript Calendar/Scheduling Components.</p>
-					<hr class="hidden" />
-				</div>
-			</div>
-		</div>
-		
-    <div id="download">
-            <div style="float:left; width: 100px;"><a href="https://javascript.daypilot.org/files/daypilot-pro-javascript-trial-2019.1.3521.zip" class="inline-btn track-download"><span>Download</span></a></div>
-            <div style="margin-left: 110px;">
-                <div>Download a trial version (1.1 MB).</div>
-                <div><a href="https://javascript.daypilot.org/files/daypilot-pro-javascript-trial-2019.1.3521.zip" class="track-download">daypilot-pro-javascript-trial-2019.1.3521.zip</a></div>
-            </div>
-    </div>
 
     <div id="main">
         <div id="tabs">
             <!-- tabs -->
-<div class="tabs-items">
-<a class='tab' href='../index.html'><span>Home</span></a>
-<a class='tab' href='../calendar/index.html'><span>Calendar</span></a>
-<a class='tab selected' href='../month/index.html'><span>Month</span></a>
-<a class='tab' href='../scheduler/index.html'><span>Scheduler</span></a>
-<a class='tab' href='../gantt/index.html'><span>Gantt</span></a>
-<a class='tab' href='../kanban/index.html'><span>Kanban</span></a>
-</div>
-<div class="header"><div class="bg-help">Outlook-Like Monthly Calendar</div></div>
+
 
             <!-- /tabs -->
         </div>
@@ -85,10 +84,7 @@
 	        <div id="left" class="menu">
 		    	            <div>
                         <!-- menu -->
-<div class="menu-title">
-    Monthly Calendar Demos
-    <span class="menu-title-icon">&#x02c5;</span>
-</div>
+
 
 <div class="menu-body">
 
@@ -193,13 +189,6 @@
 	            <div>
 <!-- /top -->
 
-<div class="note">
-    <b>Note:</b>
-
-    Customize the component using <a href="https://builder.daypilot.org/month">Monhtly Calendar UI Builder</a>
-    and download a ready-to-run project.
-
-    Read more about the <a href="http://javascript.daypilot.org/month/">JavaScript monthly calendar</a>.</div>
 
 <div id="dp"></div>
 
@@ -254,17 +243,21 @@
 
     // event creating
     dp.onTimeRangeSelected = function (args) {
-        var name = prompt("New event name:", "Event");
-        dp.clearSelection();
-        if (!name) return;
-        var e = new DayPilot.Event({
-            start: args.start,
-            end: args.end,
-            id: DayPilot.guid(),
-            text: name
-        });
-        dp.events.add(e);
-        dp.message("Created");
+        var login = false;
+        if (login){
+
+            var name = prompt("New event name:", "Event");
+            dp.clearSelection();
+            if (!name) return;
+            var e = new DayPilot.Event({
+                start: args.start,
+                end: args.end,
+                id: DayPilot.guid(),
+                text: name
+            });
+            dp.events.add(e);
+            dp.message("Created");
+        }
     };
     
     dp.onEventClicked = function(args) {
