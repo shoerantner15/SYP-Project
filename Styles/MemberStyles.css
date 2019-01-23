@@ -94,4 +94,13 @@ section article article p {
     padding-left: 25%;
     margin-bottom: 1%;
     font-family: schrift;
+    font-size: 17px;
+}
+
+/*Image*/
+#BigPicture {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    border-radius: 2%;
 }
