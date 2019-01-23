@@ -90,7 +90,8 @@ section article img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    margin-top: 2%;
+    width: 92%;
     border-radius: 2%;
 }
 
@@ -99,6 +100,12 @@ section article article {
     border-bottom: dimgrey 2.5px solid;
     padding-bottom: 2%;
     margin-bottom: 0;
+}
+
+article article p #readFurther{
+    text-decoration: none;
+    color: #FC0101;
+    margin: 0;
 }
 
 /*ASIDE*/
