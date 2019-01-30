@@ -169,19 +169,28 @@ section aside li a:hover {
 
 /*Styles für Einsätze und Übungen*/
 .collapsible {
-    background-color: #777;
-    color: white;
+    display:inline-block;
     cursor: pointer;
-    padding: 18px;
-    width: 100%;
+    margin: 1%;
     border: none;
     text-align: left;
     outline: none;
-    font-size: 15px;
+    font-family: schrift;
+    font-size: 140%;
+    background-color: white;
+}
+
+.contentOperations {
+    display: none;
+    margin-left: 5%;
+}
+
+.contentOperations a{
+    text-decoration: none;
 }
 
 .active, .collapsible:hover {
-    background-color: #555;
+
 }
 
 
@@ -199,7 +208,7 @@ input[type=text], input[type=password] {
 }
 
 /* Set a style for all buttons */
-button {
+.loginButton {
     background-color: #FC0101;
     color: white;
     padding: 14px 20px;
