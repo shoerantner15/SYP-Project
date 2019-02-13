@@ -30,17 +30,19 @@
     </nav>
 </header>
 
-<p>Einsätze: </p>
 <button class="collapsible">2019</button>
-<div class="content">
+<button class="collapsible">2018</button>
+<button class="collapsible">2017</button>
+
+<div class="contentOperations" style="display: block">
     <p><a href="Reports/2019_unfall_auf_b137.html">Schwerer Unfall auf da B137</a></p>
 </div>
-<button class="collapsible">2018</button>
-<div class="content">
+
+<div class="contentOperations">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
-<button class="collapsible">2017</button>
-<div class="content">
+
+<div class="contentOperations">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
 
@@ -48,10 +50,18 @@
     var coll = document.getElementsByClassName("collapsible");
     var i;
 
+
+
     for (i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function() {
             this.classList.toggle("active");
-            var content = this.nextElementSibling;
+            var content = this.nextElementSibling.nextElementSibling.nextElementSibling;
+
+            let contentOperations = document.getElementsByClassName("contentOperations");
+            contentOperations.forEach(function(value){
+                value.style.display = "none";
+            });
+
             if (content.style.display === "block") {
                 content.style.display = "none";
             } else {
@@ -74,7 +84,7 @@
         <div class="container">
             <input type="text" placeholder="Benuztername" name="uname">
             <input type="password" placeholder="Passwort" name="psw">
-            <button type="submit">Login</button>
+            <button class="loginButton" type="submit">Login</button>
         </div>
 
     </form>
