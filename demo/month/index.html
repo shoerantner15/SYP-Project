@@ -80,6 +80,36 @@
 
                     <div id="dp"></div>
 
+                    <div id="modal-wrapper" class="modal">
+
+                        <form class="modal-content animate" action="/action_page.png">
+
+                            <div class="imgcontainer">
+                                <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Login schließen">&times;</span>
+                                <h1 style="text-align:center">Einloggen</h1>
+                            </div>
+
+                            <div class="container">
+                                <input type="text" placeholder="Benuztername" name="uname">
+                                <input type="password" placeholder="Passwort" name="psw">
+                                <button class="loginButton" type="submit">Login</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                    <script>
+                        // If user clicks anywhere outside of the modal, Modal will close
+
+                        var modal = document.getElementById('modal-wrapper');
+                        window.onclick = function(event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                    </script>
+
 <script type="text/javascript">
 
     var dp = new DayPilot.Month("dp");
