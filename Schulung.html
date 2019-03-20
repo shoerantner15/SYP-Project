@@ -5,6 +5,9 @@
     <title>Schulung</title>
     <link href="Styles/Styles.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/Logo/icon.png"/>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/collapsible.js"></script>
+    <script type="text/javascript" src="scripts/collapsible.set.js"></script>
 </head>
 <body>
 <header>
@@ -28,5 +31,86 @@
         </ul>
     </nav>
 </header>
+
+<section>
+    <article>
+        <article style="border-bottom: #dddddd solid 1px;">
+            <div class="collapsible" data-collapsible-set="foo">
+                <h4>Österreichischer Wissenstest</h4>
+                <span>
+                    <a href="">Unterlage Wissenstest Bronze.pdf</a>
+                    <br><a href="">Unterlage Wissenstest Silber.pdf</a>
+                    <br><a href="">Unterlage Wissenstest Gold.pdf</a>
+                </span>
+            </div>
+        </article>
+        <article style="border-bottom: #dddddd solid 1px;">
+            <div class="collapsible collapsible-collapsed" data-collapsible-set="foo">
+                <h4>Bayrischer Wissenstest</h4>
+                <span>
+                    <a href="">Unterlage Wissenstest Bronze.pdf</a>
+                    <br><a href="">Unterlage Wissenstest Silber.pdf</a>
+                    <br><a href="">Unterlage Wissenstest Gold.pdf</a>
+                </span>
+            </div>
+        </article>
+        <article style="border-bottom: #dddddd solid 1px;">
+            <div class="collapsible collapsible-collapsed" data-collapsible-set="foo">
+                <h4>Grundausbildung</h4>
+                <span><a href=""> Unterlage Grundausbildung.pdf</a></span>
+            </div>
+        </article>
+        <article style="border-bottom: none;">
+            <div class="collapsible collapsible-collapsed" data-collapsible-set="foo">
+                <h4>Diverse Schulungsunterlagen</h4>
+                <span>
+                    <a href="">Schulung Atemschutz.pdf</a>
+                    <br><a href="">Schulung Taucher.pdf</a>
+                </span>
+            </div>
+        </article>
+    </article>
+    <aside>
+        <article>
+            <h1>News</h1>
+            <ul id="newsList">
+                <li><a href=""> Ölspur in Zell</a></li>
+                <li><a href="Reports/2019_unfall_auf_b137.html">Schwerer Unfall auf da B137</a></li>
+                <li><a href="">Wohnhaus Brand in Zell</a></li>
+                <li style="border-bottom: none"> <a href="" >Aufräumaktion nach Unwetter</a></li>
+            </ul>
+        </article>
+        <article>
+            <h1>Laufende Einsätze</h1>
+            <p>
+                <a href="http://intranet.ooelfv.at/" target="_blank">
+                    <img src="http://cf.intranet.ooelfv.at/webext2/img/karte_laufend.jpg" alt="Einsätze">
+                </a>
+            </p>
+        </article>
+        <article>
+            <h1>Live Unwetterwarnung</h1>
+            <a href="http://www.uwz.at" target="_blank" title="Aktuelle Unwetterwarnungen für Österreich">
+                <img src="http://www.uwz.at/at/de/outwards/current_uwz.png" alt="" width="200">
+            </a>
+        </article>
+        <article>
+            <h1>Heutige Termine</h1>
+        </article>
+    </aside>
+</section>
+
+<style>
+    .enhanced .collapsible-collapsed .collapsible-content,
+    .collapsible-enhanced.collapsible-collapsed .collapsible-content {
+        display: none;
+    }
+</style>
+<script>
+    $( function(){
+        // initialize collapsibles:
+        $( document ).trigger( "enhance" );
+    });
+</script>
 </body>
 </html>

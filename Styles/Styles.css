@@ -3,6 +3,10 @@
     src: url("../fonts/Calibri.ttf");
 }
 
+*{
+    font-family:schrift;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -22,11 +26,10 @@ nav ul {
 
 nav li {
     float: left;
-    font-family: schrift;
-
 }
 
 nav li a {
+    z-index: 10;
     display: block;
     color: white;
     text-align: center;
@@ -45,6 +48,7 @@ nav ul li ul li{
 }
 
 nav ul li ul{
+    z-index: 10;
     display: block;
     position:absolute;
 }
@@ -71,7 +75,6 @@ section
     margin: 1% 3% 3% 4%;
     padding: 0em;
     display: block;
-    font-family: schrift;
     text-align: justify;
 }
 
@@ -168,16 +171,30 @@ section aside li a:hover {
 
 
 /*Styles für Einsätze und Übungen*/
+div span a{
+    color: #FC0101;
+    text-decoration: none;
+    margin-left: 3%;
+    font-size: 90%;
+}
+div span a:hover{
+    text-decoration: underline;
+    font-size: 95%;
+    transition: 0.5s;
+}
 .collapsible {
+    cursor: default;
+    width: 100%;
     display:inline-block;
-    cursor: pointer;
-    margin: 1%;
+    margin-left: 1%;
     border: none;
     text-align: left;
     outline: none;
-    font-family: schrift;
     font-size: 140%;
     background-color: white;
+}
+.collapsible h4{
+    margin: 1%;
 }
 
 .contentOperations {
@@ -192,9 +209,27 @@ section aside li a:hover {
 .active, .collapsible:hover {
 
 }
+/*TABLE*/
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#aabcfe; width: 100%}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;overflow:hidden;word-break:normal;color:#669;background-color:#e8edff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;overflow:hidden;word-break:normal;color:#039;background-color:#b9c9fe;}
+.tg .tg-5mhu{background-color:#e50101;color:#000000;text-align:left;vertical-align:top}
+.tg .tg-14gg{background-color:#ffffff;color:#000000;text-align:left;vertical-align:top}
+.tg .tg-eiwr{background-color:#ffffff;color:#000000;text-align:left;vertical-align:top}
+tr a{
+    color: #FC0101;
+    text-decoration: none;
+}
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
 
 
-*{font-family:schrift;}
+
 
 /* Full-width input fields */
 input[type=text], input[type=password] {

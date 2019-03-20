@@ -5,6 +5,10 @@
     <title>Einsätze und Übungen</title>
     <link href="Styles/Styles.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/Logo/icon.png"/>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/collapsible.js"></script>
+    <script type="text/javascript" src="scripts/collapsible.set.js"></script>
+
 </head>
 <body>
 <header>
@@ -28,46 +32,141 @@
         </ul>
     </nav>
 </header>
+<p></p>
+<section>
+    <article>
+        <article style="border-bottom: #dddddd solid 1px;">
+            <div class="collapsible" data-collapsible-set="foo">
+                <h4>2019</h4>
+                <table class="tg">
+                    <tr>
+                        <td class="tg-5mhu">Datum</td>
+                        <td class="tg-5mhu">Einsatzbeschreibung</td>
+                        <td class="tg-5mhu">Bericht</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-14gg">11. Januar 2019</td>
+                        <td class="tg-14gg">Schwerer Unfall auf der B137</td>
+                        <td class="tg-eiwr"><a href="Reports/2019_unfall_auf_b137.html">zum Bericht</a></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-14gg">18. Januar 2019</td>
+                        <td class="tg-14gg">Irgend ein Unfall</td>
+                        <td class="tg-eiwr"><a href="Reports/2019_unfall_auf_b137.html">zum Bericht</a></td>
+                    </tr>
+                </table>
 
-<button class="collapsible">2019</button>
-<button class="collapsible">2018</button>
-<button class="collapsible">2017</button>
 
-<div class="contentOperations" style="display: block">
-    <p><a href="Reports/2019_unfall_auf_b137.html">Schwerer Unfall auf da B137</a></p>
-</div>
-
-<div class="contentOperations">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
-<div class="contentOperations">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
-<script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-
-
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling.nextElementSibling.nextElementSibling;
-
-            let contentOperations = document.getElementsByClassName("contentOperations");
-            contentOperations.forEach(function(value){
-                value.style.display = "none";
-            });
-
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
-        });
+            </div>
+        </article>
+        <article style="border-bottom: #dddddd solid 1px;">
+            <div class="collapsible collapsible-collapsed" data-collapsible-set="foo">
+                <h4>2018</h4>
+                <table class="tg">
+                    <tr>
+                        <td class="tg-5mhu">Datum</td>
+                        <td class="tg-5mhu">Einsatzbeschreibung</td>
+                        <td class="tg-5mhu">Bericht</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-14gg">11. Januar 2019</td>
+                        <td class="tg-14gg">Schwerer Unfall auf der B137</td>
+                        <td class="tg-eiwr"><a href="Reports/2019_unfall_auf_b137.html">zum Bericht</a></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-14gg">18. Januar 2019</td>
+                        <td class="tg-14gg">Irgend ein Unfall</td>
+                        <td class="tg-eiwr"><a href="Reports/2019_unfall_auf_b137.html">zum Bericht</a></td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+        <article style="border-bottom: #dddddd solid 1px;">
+            <div class="collapsible collapsible-collapsed" data-collapsible-set="foo">
+                <h4>2017</h4>
+                <table class="tg">
+                    <tr>
+                        <td class="tg-5mhu">Datum</td>
+                        <td class="tg-5mhu">Einsatzbeschreibung</td>
+                        <td class="tg-5mhu">Bericht</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-14gg">11. Januar 2019</td>
+                        <td class="tg-14gg">Schwerer Unfall auf der B137</td>
+                        <td class="tg-eiwr"><a href="Reports/2019_unfall_auf_b137.html">zum Bericht</a></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-14gg">18. Januar 2019</td>
+                        <td class="tg-14gg">Irgend ein Unfall</td>
+                        <td class="tg-eiwr"><a href="Reports/2019_unfall_auf_b137.html">zum Bericht</a></td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+        <article style="border-bottom: none;">
+            <div class="collapsible collapsible-collapsed" data-collapsible-set="foo">
+                <h4>2016</h4>
+                <table class="tg">
+                    <tr>
+                        <td class="tg-5mhu">Datum</td>
+                        <td class="tg-5mhu">Einsatzbeschreibung</td>
+                        <td class="tg-5mhu">Bericht</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-14gg">11. Januar 2019</td>
+                        <td class="tg-14gg">Schwerer Unfall auf der B137</td>
+                        <td class="tg-eiwr"><a href="Reports/2019_unfall_auf_b137.html">zum Bericht</a></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-14gg">18. Januar 2019</td>
+                        <td class="tg-14gg">Irgend ein Unfall</td>
+                        <td class="tg-eiwr"><a href="Reports/2019_unfall_auf_b137.html">zum Bericht</a></td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+    </article>
+    <aside>
+        <article>
+            <h1>News</h1>
+            <ul id="newsList">
+                <li><a href=""> Ölspur in Zell</a></li>
+                <li><a href="Reports/2019_unfall_auf_b137.html">Schwerer Unfall auf da B137</a></li>
+                <li><a href="">Wohnhaus Brand in Zell</a></li>
+                <li style="border-bottom: none"> <a href="" >Aufräumaktion nach Unwetter</a></li>
+            </ul>
+        </article>
+        <article>
+            <h1>Laufende Einsätze</h1>
+            <p>
+                <a href="http://intranet.ooelfv.at/" target="_blank">
+                    <img src="http://cf.intranet.ooelfv.at/webext2/img/karte_laufend.jpg" alt="Einsätze">
+                </a>
+            </p>
+        </article>
+        <article>
+            <h1>Live Unwetterwarnung</h1>
+            <a href="http://www.uwz.at" target="_blank" title="Aktuelle Unwetterwarnungen für Österreich">
+                <img src="http://www.uwz.at/at/de/outwards/current_uwz.png" alt="" width="200">
+            </a>
+        </article>
+        <article>
+            <h1>Heutige Termine</h1>
+        </article>
+    </aside>
+</section>
+<style>
+    .enhanced .collapsible-collapsed .collapsible-content,
+    .collapsible-enhanced.collapsible-collapsed .collapsible-content {
+        display: none;
     }
+</style>
+<script>
+    $( function(){
+        // initialize collapsibles:
+        $( document ).trigger( "enhance" );
+    });
 </script>
+
 </body>
 </html>
