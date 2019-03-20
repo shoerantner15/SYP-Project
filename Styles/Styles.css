@@ -171,6 +171,17 @@ section aside li a:hover {
 
 
 /*Styles für Einsätze und Übungen*/
+div span a{
+    color: #FC0101;
+    text-decoration: none;
+    margin-left: 3%;
+    font-size: 90%;
+}
+div span a:hover{
+    text-decoration: underline;
+    font-size: 95%;
+    transition: 0.5s;
+}
 .collapsible {
     cursor: default;
     width: 100%;
