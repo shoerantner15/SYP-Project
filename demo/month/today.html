@@ -1,8 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Highlighting Today (Monthly Event Calendar)</title>
-	
+
         <!-- head -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,28 +18,32 @@
     <script src="../js/daypilot-all.min.js?v=2019.1.3521" type="text/javascript"></script>
 
     <!-- daypilot themes -->
-	<link type="text/css" rel="stylesheet" href="../themes/areas.css?v=2019.1.3521" />    
-        
-	<link type="text/css" rel="stylesheet" href="../themes/month_white.css?v=2019.1.3521" />    
-	<link type="text/css" rel="stylesheet" href="../themes/month_green.css?v=2019.1.3521" />    
-	<link type="text/css" rel="stylesheet" href="../themes/month_transparent.css?v=2019.1.3521" />    
-    <link type="text/css" rel="stylesheet" href="../themes/month_traditional.css?v=2019.1.3521" />
-        
-	<link type="text/css" rel="stylesheet" href="../themes/navigator_8.css?v=2019.1.3521" />    
-	<link type="text/css" rel="stylesheet" href="../themes/navigator_white.css?v=2019.1.3521" />    
-        
-	<link type="text/css" rel="stylesheet" href="../themes/calendar_transparent.css?v=2019.1.3521" />    
-	<link type="text/css" rel="stylesheet" href="../themes/calendar_white.css?v=2019.1.3521" />    
-	<link type="text/css" rel="stylesheet" href="../themes/calendar_green.css?v=2019.1.3521" />    
-    <link type="text/css" rel="stylesheet" href="../themes/calendar_traditional.css?v=2019.1.3521" />
 
-    <link type="text/css" rel="stylesheet" href="../themes/scheduler_8.css?v=2019.1.3521" />
-	<link type="text/css" rel="stylesheet" href="../themes/scheduler_white.css?v=2019.1.3521" />    
-	<link type="text/css" rel="stylesheet" href="../themes/scheduler_green.css?v=2019.1.3521" />    
-	<link type="text/css" rel="stylesheet" href="../themes/scheduler_blue.css?v=2019.1.3521" />    
-    <link type="text/css" rel="stylesheet" href="../themes/scheduler_traditional.css?v=2019.1.3521" />
-	<link type="text/css" rel="stylesheet" href="../themes/scheduler_transparent.css?v=2019.1.3521" />    
-
+    <title>FF Zell an der Pram</title>
+    <link href="../../Login.html" rel="login">
+    <link rel="shortcut icon" href="../../images/Logo/icon.png"/>
+    <header style="margin-bottom: 6%">
+        <img src="../../images/Logo/Logo%20Zell%20a.%20P..png">
+        <nav id="nav">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="index.html">Kalender</a> </li>
+                <li><a>Mitglieder</a>
+                    <ul>
+                        <li><a href="../../Members/Aktiv.html">Aktiv</a></li>
+                        <li><a href="../../Members/Jugend.html">Jugend</a></li>
+                        <li><a href="../../Members/Reserve.html">Reserve</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../EinsätzeUndÜbungen.html">Einsätze & Übungen</a> </li>
+                <li><a href="../../Ausrüstung.html">Ausrüstung</a> </li>
+                <li><a href="../../Schulung.html">Schulungen</a> </li>
+                <li><a href="../../Geschichte.html">Geschichte</a> </li>
+                <li><a href="../../Fotos.html">Fotos</a> </li>
+                <li style="float:right" onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-top:200px; margin-left:160px;"><a>Login</a> </li>
+            </ul>
+        </nav>
+    </header>
 
 	<!-- /head -->
 </head>
@@ -65,21 +68,7 @@
             </div>
     </div>
 
-    <div id="main">
-        <div id="tabs">
-            <!-- tabs -->
-<div class="tabs-items">
-<a class='tab' href='../index.html'><span>Home</span></a>
-<a class='tab' href='../calendar/index.html'><span>Calendar</span></a>
-<a class='tab selected' href='../month/index.html'><span>Month</span></a>
-<a class='tab' href='../scheduler/index.html'><span>Scheduler</span></a>
-<a class='tab' href='../gantt/index.html'><span>Gantt</span></a>
-<a class='tab' href='../kanban/index.html'><span>Kanban</span></a>
-</div>
-<div class="header"><div class="bg-help">Outlook-Like Monthly Calendar</div></div>
 
-            <!-- /tabs -->
-        </div>
         
         <div id="container" >
 	        <div id="left" class="menu">
@@ -88,102 +77,6 @@
 <div class="menu-title">
     Monthly Calendar Demos
     <span class="menu-title-icon">&#x02c5;</span>
-</div>
-
-<div class="menu-body">
-
-<div class="header">Main</div>
-<div>
-  <a href='index.html'><span>JavaScript Monthly Event Calendar</span></a>
-</div>
-<div class="header">Navigation</div>
-<div>
-  <a href='navigator.html'><span>Navigator</span></a>
-</div>
-<div>
-  <a href='datepicker.html'><span>Date Picker</span></a>
-</div>
-<div>
-  <a href='nextprevious.html'><span>Next/Previous</span></a>
-</div>
-<div class="header">Themes</div>
-<div>
-  <a href='themegreen.html'><span>Green</span></a>
-</div>
-<div>
-  <a href='themetransparent.html'><span>Transparent</span></a>
-</div>
-<div>
-  <a href='themewhite.html'><span>White</span></a>
-</div>
-<div>
-  <a href='themetraditional.html'><span>Traditional</span></a>
-</div>
-<div class="header">Events</div>
-<div>
-  <a href='eventareas.html'><span>Event Active Areas</span></a>
-</div>
-<div>
-  <a href='eventmenu.html'><span>Event Context Menu</span></a>
-</div>
-<div>
-  <a href='eventdeleting.html'><span>Event Deleting</span></a>
-</div>
-<div>
-  <a href='eventfiltering.html'><span>Event Filtering</span></a>
-</div>
-<div>
-  <a href='eventcustomization.html'><span>Event Customization</span></a>
-</div>
-<div>
-  <a href='eventposition.html'><span>Event Position</span></a>
-</div>
-<div>
-  <a href='eventselecting.html'><span>Event Selecting</span></a>
-</div>
-<div>
-  <a href='eventstartend.html'><span>Event Start and End Time</span></a>
-</div>
-<div>
-  <a href='eventendspec.html'><span>Event End Spec</span></a>
-</div>
-<div>
-  <a href='external.html'><span>External Drag and Drop</span></a>
-</div>
-<div class="header">Grid</div>
-<div>
-  <a href='today.html'><span>Highlighting Today</span></a>
-</div>
-<div class="header">Export</div>
-<div>
-  <a href='exportjpeg.html'><span>JPEG Export</span></a>
-</div>
-<div>
-  <a href='exportsvg.html'><span>SVG Export</span></a>
-</div>
-<div class="header">API</div>
-<div>
-    <a href='angular2.html'><span>Angular 2+</span></a>
-</div>
-<div>
-    <a href='angularjs.html'><span>AngularJS</span></a>
-</div>
-<div>
-    <a href='jquery.html'><span>jQuery</span></a>
-</div>
-<div class="header">Appearance</div>
-<div>
-  <a href='100pctheight.html'><span>100% Height</span></a>
-</div>
-<div class="header">View Types</div>
-<div>
-  <a href='weeks.html'><span>Weeks</span></a>
-</div>
-<div class="header">Localization</div>
-<div>
-  <a href='localization.html'><span>Localization</span></a>
-</div>
-
 </div>
 
                         <!-- /menu -->

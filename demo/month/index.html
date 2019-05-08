@@ -17,8 +17,8 @@
     <script src="../js/daypilot-all.min.js?v=2019.1.3521" type="text/javascript"></script>
 
     <!-- daypilot themes -->
-    <link type="text/css" rel="stylesheet" href="../themes/areas.css?v=2019.1.3521" />
-    <link type="text/css" rel="stylesheet" href="../themes/month_white.css?v=2019.1.3521" />
+    <!--<link type="text/css" rel="stylesheet" href="../themes/areas.css?v=2019.1.3521" />
+    <link type="text/css" rel="stylesheet" href="../themes/month_white.css?v=2019.1.3521" />-->
     <link href="../../Styles/Styles.css" rel="stylesheet">
 
 
@@ -45,6 +45,7 @@
                 <li><a href="../../Geschichte.html">Geschichte</a> </li>
                 <li><a href="../../Fotos.html">Fotos</a> </li>
                 <li style="float:right" onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-top:200px; margin-left:160px;"><a>Login</a> </li>
+                <li style="float:right; display:none" onclick="document.getElementById('add_event').style.display='block'" style=" width:200px; margin-top:200px; margin-left:160px;" id="menu_item_add_event"><a>Veranstaltung hinzufügen</a> </li>
             </ul>
         </nav>
     </header>
@@ -77,8 +78,14 @@
 	            <div>
 <!-- /top -->
 
+                    <button>
+                        <img src="../images/links.png" height="30dp" width="50dp"/>
+                    </button>
+                    <button style="margin-left: 90%">
+                        <img src="../images/rechts.png" height="30dp" width="50dp"/>
+                    </button>
 
-                    <div id="dp" style="visibility: hidden"></div>
+                    <div id="dp"></div>
 
                     <div id="modal-wrapper" class="modal">
 
@@ -86,34 +93,62 @@
 
                             <div class="imgcontainer">
                                 <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Login schließen">&times;</span>
-                                <h1 style="text-align:center">Einloggen</h1>
+                                <h1 id="login_header" style="text-align:center">Einloggen</h1>
                             </div>
 
                             <div class="container">
-                                <input type="text" placeholder="Benuztername" name="uname">
-                                <input type="password" placeholder="Passwort" name="psw">
-                                <button class="loginButton" type="submit">Login</button>
+                                <input type="text" placeholder="Benuztername" name="uname" id="uname">
+                                <input type="password" placeholder="Passwort" name="psw" id="passw">
+                                <button class="loginButton" onclick="function login_btn() {
+
+                                    var uname = getElementById('uname').value;
+                                    var password = getElementById('passw').value;
+                                    if (uname === 'maschauer15' && password === 'password') {
+                                        getElementById('menu_item_add_event').style.display = 'block';
+                                        document.getElementById('modal-wrapper').style.display='none';
+                                    }else {
+                                         getElementById('login_header').textContent = 'Falscher Benutzername bzw. falsches Passwort';
+                                         getElementById('login_header').fontColor = 'red';
+                                     }
+
+
+                                }
+                                login_btn()" type="button">Login</button>
                             </div>
 
                         </form>
 
                     </div>
 
-                    <script>
-                        // If user clicks anywhere outside of the modal, Modal will close
 
-                        var modal = document.getElementById('modal-wrapper');
-                        window.onclick = function(event) {
-                            if (event.target == modal) {
-                                modal.style.display = "none";
-                            }
-                        }
-                    </script>
+                    <!--<div id="dp" style="visibility: hidden"></div>-->
+
+                    <div id="add_event" class="add_event">
+
+                        <form class="modal-content animate" action="action_page.png">
+
+                            <div class="imgcontainer">
+                                <span onclick="document.getElementById('add_event').style.display='none'" class="close" title="Login schließen">&times;</span>
+                                <h1 style="text-align:center">Veranstaltung hinzufügen</h1>
+                            </div>
+
+                            <div class="container">
+                                <input id="event_name_txt" type="text" placeholder="Veranstaltung" name="event_name">
+                                <input id="duration" type="text" placeholder="Dauer" name="event_name">
+                                <input id="start" type="text" placeholder="Tag im Monat" name="event_name">
+
+                                <button onclick="add_event(getElementById('event_name_txt').value, getElementById('duration').value,getElementById('start').value)" id="add_event_button" class="AddButton" type="button" >Speichern</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
 
 <script type="text/javascript">
 
     var dp = new DayPilot.Month("dp");
-
+    var login = false;
     // behavior and appearance
     dp.cellMarginBottom = 20;
 
@@ -124,30 +159,61 @@
         }
     });
 
+
+    var modal = document.getElementById('modal-wrapper');
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        document.getElementById('modal-wrapper').style.display='none';
+    }
+
     // view
     dp.startDate = DayPilot.Date.today();
 
     // generate and load events
+    if(1==2){
     for (var i = 0; i < 10; i++) {
-        var duration = Math.floor(Math.random() * 1.2);
-        var start = Math.floor(Math.random() * 6) - 3; // -3 to 3
+        var duration = Math.floor(Math.random() * 7);
+        var start = Math.random(7); // -3 to 3
 
         var e = new DayPilot.Event({
             start: DayPilot.Date.today().firstDayOfMonth().addDays(start),
             end: DayPilot.Date.today().firstDayOfMonth().addDays(start).addDays(duration),
             id: DayPilot.guid(),
-            text: "Event " + i
+            text: "Frühshoppen " + i
         });
         dp.events.add(e);
     }
+    }
+    //  event anlegen
+    //document.querySelector('#add_event_button').addEventListener('click', add_event);
+
+    function add_event (ev_name, duration, start) {
+        //var duration = Math.floor(Math.random() * 2);
+        //var start = (Math.random()*6)-3; // -3 to 3
+        start = start - 1;
+        var e = new DayPilot.Event({
+            start: DayPilot.Date.today().firstDayOfMonth().addDays(start),
+            end: DayPilot.Date.today().firstDayOfMonth().addDays(start).addDays(duration),
+            id: DayPilot.guid(),
+            text: ev_name.toString()
+        });
+        //console.log("event added");
+
+        dp.events.add(e);
+        document.getElementById('add_event').style.display='none';
+
+    }
+
+    window.onclick = function(event) {
+        if (event.target == add_event) {
+            modal.style.display = "none";
+        }
+    }
 
     // event moving
-    dp.onEventMoved = function (args) {
-        var login = false;
-        if(login){
-            dp.message("Moved: " + args.e.text());
-        }
-    };
+
 
     // event resizing
     dp.onEventResized = function (args) {
@@ -163,30 +229,30 @@
     };
 
     // event creating
-    dp.onTimeRangeSelected = function (args) {
-        var login = false;
-        if (login){
+   // dp.onTimeRangeSelected = function (args) {
 
-            var name = prompt("New event name:", "Event");
-            dp.clearSelection();
-            if (!name) return;
-            var e = new DayPilot.Event({
-                start: args.start,
-                end: args.end,
-                id: DayPilot.guid(),
-                text: name
-            });
-            dp.events.add(e);
-            dp.message("Created");
-        }
-    };
+    //     if (login){
+
+    //      var name = prompt("New event name:", "Event");
+    //      dp.clearSelection();
+    //      if (!name) return;
+    //      var e = new DayPilot.Event({
+    ////          start: args.start,
+    //        end: args.end,
+    //          id: DayPilot.guid(),
+    //          text: name
+    //      });
+    //      dp.events.add(e);
+    //      dp.message("Created");
+    //  }
+    //};
     
     dp.onEventClicked = function(args) {
        // alert("clicked: " + args.e.tag("url"));
     };
     
     dp.onHeaderClicked = function(args) {
-       // alert("day: " + args.header.dayOfWeek);
+
     };
 
     dp.init();
