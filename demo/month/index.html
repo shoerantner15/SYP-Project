@@ -1,291 +1,80 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Kalender</title>
-	
-        <!-- head -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset='utf-8' />
+    <link href='../../packages/core/main.css' rel='stylesheet' />
+    <link href='../../packages/daygrid/main.css' rel='stylesheet' />
+    <script src='../../packages/core/main.js'></script>
+    <script src='../../packages/interaction/main.js'></script>
+    <script src='../../packages/daygrid/main.js'></script>
 
-    <!-- demo stylesheet -->
-
-
-	<!-- helper libraries -->
-
-
-    <!-- daypilot libraries -->
-    <script src="../js/daypilot-all.min.js?v=2019.1.3521" type="text/javascript"></script>
-
-    <!-- daypilot themes -->
-    <!--<link type="text/css" rel="stylesheet" href="../themes/areas.css?v=2019.1.3521" />
-    <link type="text/css" rel="stylesheet" href="../themes/month_white.css?v=2019.1.3521" />-->
-    <link href="../../Styles/Styles.css" rel="stylesheet">
-
-
-
-    <title>FF Zell an der Pram</title>
-    <link href="../../Login.html" rel="login">
+    <link href="../../Styles/Styles.css" rel="stylesheet"/>
     <link rel="shortcut icon" href="../../images/Logo/icon.png"/>
-    <header style="margin-bottom: 6%">
-        <img src="../../images/Logo/Logo%20Zell%20a.%20P..png">
-        <nav id="nav">
-            <ul>
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="index.html">Kalender</a> </li>
-                <li><a>Mitglieder</a>
-                    <ul>
-                        <li><a href="../../Members/Aktiv.html">Aktiv</a></li>
-                        <li><a href="../../Members/Jugend.html">Jugend</a></li>
-                        <li><a href="../../Members/Reserve.html">Reserve</a></li>
-                    </ul>
-                </li>
-                <li><a href="../../EinsätzeUndÜbungen.html">Einsätze & Übungen</a> </li>
-                <li><a href="../../Ausrüstung.html">Ausrüstung</a> </li>
-                <li><a href="../../Schulung.html">Schulungen</a> </li>
-                <li><a href="../../Geschichte.html">Geschichte</a> </li>
-                <li><a href="../../Fotos.html">Fotos</a> </li>
-                <li style="float:right" onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-top:200px; margin-left:160px;"><a>Login</a> </li>
-                <li style="float:right; display:none" onclick="document.getElementById('add_event').style.display='block'" style=" width:200px; margin-top:200px; margin-left:160px;" id="menu_item_add_event"><a>Veranstaltung hinzufügen</a> </li>
-            </ul>
-        </nav>
-    </header>
-	<!-- /head -->
-</head>
-<body>
 
-<!-- top -->
+  <!-- <script>
 
-    <div id="main" style="margin: 5%">
-        <div id="tabs">
-            <!-- tabs -->
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
 
-
-            <!-- /tabs -->
-        </div>
-        
-        <div id="container" >
-	        <div id="left" class="menu">
-		    	            <div>
-                        <!-- menu -->
-
-
-
-
-                        <!-- /menu -->
-	    		            </div>
-            </div>
-	        <div id="content">
-	            <div>
-<!-- /top -->
-
-                    <button>
-                        <img src="../images/links.png" height="30dp" width="50dp"/>
-                    </button>
-                    <button style="margin-left: 90%">
-                        <img src="../images/rechts.png" height="30dp" width="50dp"/>
-                    </button>
-
-                    <div id="dp"></div>
-
-                    <div id="modal-wrapper" class="modal">
-
-                        <form class="modal-content animate" action="/action_page.png">
-
-                            <div class="imgcontainer">
-                                <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Login schließen">&times;</span>
-                                <h1 id="login_header" style="text-align:center">Einloggen</h1>
-                            </div>
-
-                            <div class="container">
-                                <input type="text" placeholder="Benuztername" name="uname" id="uname">
-                                <input type="password" placeholder="Passwort" name="psw" id="passw">
-                                <button class="loginButton" onclick="function login_btn() {
-
-                                    var uname = getElementById('uname').value;
-                                    var password = getElementById('passw').value;
-                                    if (uname === 'maschauer15' && password === 'password') {
-                                        getElementById('menu_item_add_event').style.display = 'block';
-                                        document.getElementById('modal-wrapper').style.display='none';
-                                    }else {
-                                         getElementById('login_header').textContent = 'Falscher Benutzername bzw. falsches Passwort';
-                                         getElementById('login_header').fontColor = 'red';
-                                     }
-
-
-                                }
-                                login_btn()" type="button">Login</button>
-                            </div>
-
-                        </form>
-
-                    </div>
-
-
-                    <!--<div id="dp" style="visibility: hidden"></div>-->
-
-                    <div id="add_event" class="add_event">
-
-                        <form class="modal-content animate" action="action_page.png">
-
-                            <div class="imgcontainer">
-                                <span onclick="document.getElementById('add_event').style.display='none'" class="close" title="Login schließen">&times;</span>
-                                <h1 style="text-align:center">Veranstaltung hinzufügen</h1>
-                            </div>
-
-                            <div class="container">
-                                <input id="event_name_txt" type="text" placeholder="Veranstaltung" name="event_name">
-                                <input id="duration" type="text" placeholder="Dauer" name="event_name">
-                                <input id="start" type="text" placeholder="Tag im Monat" name="event_name">
-
-                                <button onclick="add_event(getElementById('event_name_txt').value, getElementById('duration').value,getElementById('start').value)" id="add_event_button" class="AddButton" type="button" >Speichern</button>
-                            </div>
-
-                        </form>
-
-                    </div>
-
-
-<script type="text/javascript">
-
-    var dp = new DayPilot.Month("dp");
-    var login = false;
-    // behavior and appearance
-    dp.cellMarginBottom = 20;
-
-    dp.bubble = new DayPilot.Bubble({
-        onLoad: function(args) {
-            var ev = args.source;
-            args.html = "testing bubble for: " + ev.text();
-        }
-    });
-
-
-    var modal = document.getElementById('modal-wrapper');
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-        document.getElementById('modal-wrapper').style.display='none';
-    }
-
-    // view
-    dp.startDate = DayPilot.Date.today();
-
-    // generate and load events
-    if(1==2){
-    for (var i = 0; i < 10; i++) {
-        var duration = Math.floor(Math.random() * 7);
-        var start = Math.random(7); // -3 to 3
-
-        var e = new DayPilot.Event({
-            start: DayPilot.Date.today().firstDayOfMonth().addDays(start),
-            end: DayPilot.Date.today().firstDayOfMonth().addDays(start).addDays(duration),
-            id: DayPilot.guid(),
-            text: "Frühshoppen " + i
-        });
-        dp.events.add(e);
-    }
-    }
-    //  event anlegen
-    //document.querySelector('#add_event_button').addEventListener('click', add_event);
-
-    function add_event (ev_name, duration, start) {
-        //var duration = Math.floor(Math.random() * 2);
-        //var start = (Math.random()*6)-3; // -3 to 3
-        start = start - 1;
-        var e = new DayPilot.Event({
-            start: DayPilot.Date.today().firstDayOfMonth().addDays(start),
-            end: DayPilot.Date.today().firstDayOfMonth().addDays(start).addDays(duration),
-            id: DayPilot.guid(),
-            text: ev_name.toString()
-        });
-        //console.log("event added");
-
-        dp.events.add(e);
-        document.getElementById('add_event').style.display='none';
-
-    }
-
-    window.onclick = function(event) {
-        if (event.target == add_event) {
-            modal.style.display = "none";
-        }
-    }
-
-    // event moving
-
-
-    // event resizing
-    dp.onEventResized = function (args) {
-        //dp.message("Resized: " + args.e.text());
-    };
-
-    dp.onBeforeHeaderRender = function(args) {
-
-    };
-
-    dp.onBeforeEventRender = function(args) {
-        //args.data.fontColor = "red";
-    };
-
-    // event creating
-   // dp.onTimeRangeSelected = function (args) {
-
-    //     if (login){
-
-    //      var name = prompt("New event name:", "Event");
-    //      dp.clearSelection();
-    //      if (!name) return;
-    //      var e = new DayPilot.Event({
-    ////          start: args.start,
-    //        end: args.end,
-    //          id: DayPilot.guid(),
-    //          text: name
-    //      });
-    //      dp.events.add(e);
-    //      dp.message("Created");
-    //  }
-    //};
-    
-    dp.onEventClicked = function(args) {
-       // alert("clicked: " + args.e.tag("url"));
-    };
-    
-    dp.onHeaderClicked = function(args) {
-
-    };
-
-    dp.init();
-
-</script>
-
-<!-- bottom -->
-                </div>
-	        </div>
-        </div>
-    </div>
-<script type="text/javascript">
-$(document).ready(function() {
-    var url = window.location.href;
-    var filename = url.substring(url.lastIndexOf('/')+1);
-    if (filename === "") filename = "index.html";
-    $(".menu a[href='" + filename + "']").addClass("selected");
-
-    $(".menu-title").click(function() {
-        $(".menu-body").toggle();
-        if ($(".menu-body").is(":visible")) {
-            scrollTo({
-                top: pageYOffset + 100,
-                behavior: "smooth"
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: [ 'interaction', 'dayGrid' ],
+                defaultDate: new Date(),
+                editable: true,
+                eventLimit: true
             });
-        }
-    });
-});
-        
-</script>
 
-<!-- /bottom -->
+            calendar.render();
+
+            $('#calendar').on('click', ev => {
+                console.log(ev.target);
+            });
+        });
+
+
+
+    </script>
+    <style>
+
+        body {
+            margin: 10px 0px;
+            padding: 0;
+            font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+
+        #calendar {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+    </style>-->
+</head>
+    <img src="../../images/Logo/Logo%20Zell%20a.%20P..png" style="margin-left: 9px; margin-bottom: 12px;">
+    <nav id="nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../demo/month/index.html">Kalender</a> </li>
+            <li><a href="../../Mitglieder.html">Mitglieder</a>
+                <ul>
+                    <li><a href="../../Members/Aktiv.html">Aktiv</a></li>
+                    <li><a href="../../Members/Jugend.html">Jugend</a></li>
+                    <li><a href="../../Members/Reserve.html">Reserve</a></li>
+                </ul>
+            </li>
+            <li><a href="../../EinsätzeUndÜbungen.html">Einsätze & Übungen</a> </li>
+            <li><a href="../../Ausrüstung.html">Ausrüstung</a> </li>
+            <li><a href="../../Schulung.html">Schulungen</a> </li>
+            <li><a href="../../Geschichte.html">Geschichte</a> </li>
+            <li><a href="../../Fotos.html">Fotos</a> </li>
+        </ul>
+    </nav>
+</header>
+<body>
+<iframe src="https://calendar.google.com/calendar/embed?src=3h1rpk11pjon3lgu4mc732jpt0%40group.calendar.google.com&ctz=Europe%2FVienna"
+        style="border: 0; margin: 0% 20%;" width="60%" height="800" frameborder="0" scrolling="no"></iframe>
+
+<div id='calendar'></div>
 
 </body>
 </html>
-
