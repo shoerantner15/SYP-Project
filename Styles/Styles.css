@@ -253,6 +253,17 @@ input[type=text], input[type=password] {
     width: 90%;
     font-size:20px;
 }
+
+.AddButton {
+    background-color: #FC0101;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 26px;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+    font-size:20px;
+}
 button:hover {
     opacity: 0.8;
 }
@@ -271,6 +282,17 @@ button:hover {
 
 /* The Modal (background) */
 .modal {
+     display:none;
+     position: fixed;
+     z-index: 1;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     overflow: auto;
+     background-color: rgba(0,0,0,0.4);
+ }
+.add_event {
     display:none;
     position: fixed;
     z-index: 1;
