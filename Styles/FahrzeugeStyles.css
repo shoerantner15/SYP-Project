@@ -1,0 +1,148 @@
+@font-face {
+    font-family: schrift;
+    src: url("../fonts/Calibri.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*MENÜ*/
+header img {
+    margin: 1%;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+    font-family: schrift;
+
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px 16px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover, nav li a.active{
+    background-color: #FC0101;
+    transition: 0.20s;
+
+}
+
+nav ul li ul li{
+    float: none;
+}
+
+nav ul li ul{
+    display: block;
+    position:absolute;
+}
+
+nav ul li ul li a {
+    display: block;
+    text-align: left;
+    padding: 10px 12px 12px 12px;
+}
+
+nav ul li ul{
+    display: none;
+    position: absolute;
+    background-color: red;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+
+
+
+section article{
+    display: block;
+
+    background-color: #EDEDED;
+}
+
+
+
+section article article{
+    padding-bottom: 7%;
+    padding-top: 2%;
+    padding-left: 1%;
+    border-top: #dddddd  1px solid;
+}
+
+section article article p {
+    margin: 0;
+    padding-left: 25%;
+    margin-bottom: 1%;
+    font-family: schrift;
+    padding-right: 10%;
+    font-size: 17px;
+}
+
+section article article img{
+    width: 20%;
+    margin-left: 2%;
+    padding-bottom: 2%;
+
+}
+
+section article article ul{
+    margin: 0;
+    padding-left: 25%;
+    margin-bottom: 1%;
+    font-family: schrift;
+    font-size: 17px;
+}
+
+
+div{
+    font-family: schrift;
+    padding-left: 10%;
+
+
+}
+
+.right
+{
+    float: right;
+    width: 30%;
+    padding-right: 10%;
+    height: 500px;
+    padding-left: 0%;
+}
+
+.left
+{
+    float: left;
+    alignment: left;
+    width: 40%;
+}
+
+.right img
+{
+    width: 300px;
+    height: 300px;
+}
+
+section {
+    display: block;
+
+}
+
+.border{
+    border-bottom: 2px solid  black;
+
+}
