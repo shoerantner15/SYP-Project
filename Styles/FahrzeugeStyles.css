@@ -53,6 +53,11 @@ nav ul li ul li a {
     display: block;
     text-align: left;
     padding: 10px 12px 12px 12px;
+    width: 81px;
+}
+nav ul li ul:hover{
+    background-color: rgb(168, 0, 0);
+
 }
 
 nav ul li ul{
@@ -133,7 +138,8 @@ div{
 
 .right img
 {
-    width: 300px;
+    padding-top: 100px;
+    width: 350px;
     height: 300px;
 }
 
